@@ -1,0 +1,17 @@
+{
+  "entities": {
+    "daily_puzzles": {
+      "title": "Daily Puzzles",
+      "description": "Stores pre-generated or AI-generated daily sentence puzzles indexed by date YYYY-MM-DD",
+      "properties": {
+        "date": { "type": "string", "description": "Date in YYYY-MM-DD format" },
+        "targetSentence": { "type": "string", "description": "Target English sentence" },
+        "targetWords": { "type": "array", "items": { "type": "string" }, "description": "List of words in sentence" },
+        "imageUrl": { "type": "string", "description": "Generated visual image URL" },
+        "visualPrompt": { "type": "string", "description": "Prompt used for visual" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" }
+      },
+      "required": ["date", "targetSentence", "targetWords", "imageUrl"]
+    }
+  }
+}
